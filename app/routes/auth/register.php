@@ -18,16 +18,37 @@ $app->post('/register', function() use ($app) {
   $companyAddress = $request->post('company_address');
   $telephoneNumber = $request->post('telephone_number');
 
-  $app->user->create([
-    'email' => $email,
-    'username' => $username,
-    'password' => $app->hash->password($password),
-    'company_name' => $companyName,
-    'company_address' => $companyAddress,
-    'telephone_number' => $telephoneNumber,
+  $v = $app->validation;
+
+  $v->validate([
+    'Email' => [$email, 'required|email'],
+    'Username' => [$username, 'required|alnumDash|max(20)'],
+    'Password' => [$password, 'required|min(6)'],
+    'Confirm password' => [$passwordConfirm, 'required|matches(Password)'],
+    'Company name' => [$companyName, 'required'],
+    'Company address' => [$companyAddress, 'required'],
+    'Telephone number' => [$telephoneNumber, 'required|number'],
   ]);
 
-  $app->flash('success', 'You have been registered!');
-  $app->response->redirect($app->urlFor('home'));
+  if ($v->passes()) {
+    $app->user->create([
+      'email' => $email,
+      'username' => $username,
+      'password' => $app->hash->password($password),
+      'company_name' => $companyName,
+      'company_address' => $companyAddress,
+      'telephone_number' => $telephoneNumber,
+    ]);
+
+    $app->flash('success', 'You have been registered!');
+    $app->response->redirect($app->urlFor('home'));
+  }
+
+  $app->render('auth/register.php', [
+    'errors' => $v->errors(),
+    'request' => $request
+  ]);
+
+
 
 })->name('register.post');

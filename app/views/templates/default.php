@@ -26,7 +26,7 @@
       $(function() {
         setTimeout(
           function() {
-            $('.alert').slideToggle(1000, function() {
+            $('.flash-alert').slideToggle(1000, function() {
               $(this).remove();
             });
           }, 3000);
