@@ -31,7 +31,7 @@ return [
         'html' => true
       ],
       'twig' => [
-        'debug' => true
+        'debug' => false
       ],
       'csrf' => [
         'session' => 'csrf_token'
