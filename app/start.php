@@ -20,3 +20,5 @@ $app->configureMode($app->config('mode'), function() use ($app) {
   $mode = preg_replace('/\s+/', '', $app->mode);
   $app->config = Config::load(INC_ROOT . "/app/config/{$mode}.php");
 });
+
+require 'database.php';
