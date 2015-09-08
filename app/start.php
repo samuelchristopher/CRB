@@ -2,6 +2,7 @@
 
 use Slim\Slim;
 use Noodlehaus\Config;
+use CRB\User\User;
 
 session_cache_limiter(false);
 session_start();
@@ -22,3 +23,7 @@ $app->configureMode($app->config('mode'), function() use ($app) {
 });
 
 require 'database.php';
+
+$app->container->set('user', function() {
+  return new User;
+});
