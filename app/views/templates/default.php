@@ -10,7 +10,7 @@
 
     <!-- Optional theme -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
-    <link rel="stylesheet" href="https://bootswatch.com/journal/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css">
   </head>
   <body>
     {% include 'templates/partials/messages.php' %}
@@ -20,5 +20,16 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/umd/alert.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        setTimeout(
+          function() {
+            $('.alert').slideToggle(1000, function() {
+              $(this).remove();
+            });
+          }, 3000);
+
+      });
+    </script>
   </body>
 </html>
