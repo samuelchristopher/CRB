@@ -13,7 +13,11 @@
     <div class="navbar-collapse collapse in" id="bs-example-navbar-collapse-1" aria-expanded="true">
       <ul class="nav navbar-nav">
         <li class="active"><a href="{{ urlFor('home') }}">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="{{ urlFor('register') }}">Register</a></li>
+        {% if auth %}
+        {% else %}
+          <li><a href="{{ urlFor('register') }}">Register</a></li>
+          <li><a href="{{ urlFor('login') }}">login</a></li>
+        {% endif %}
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -28,7 +32,10 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        {% if auth %}
+          <li><a href="#">Welcome {{auth.getFullNameOrUsername}}!</a></li>
+        {% endif %}
+        <!-- <li><a href="{{ urlFor('login') }}">Login</a></li> -->
       </ul>
     </div>
   </div>

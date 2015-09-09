@@ -10,6 +10,8 @@ use CRB\User\User;
 use CRB\Helpers\Hash;
 use CRB\Validation\Validator;
 
+use CRB\Middleware\BeforeMiddleware;
+
 session_cache_limiter(false);
 session_start();
 
@@ -25,6 +27,8 @@ $app = new Slim([
     'templates.path' => INC_ROOT . '/app/views'
 ]);
 
+$app->add(new BeforeMiddleware);
+
 $app->configureMode($app->config('mode'), function() use ($app) {
   $mode = preg_replace('/\s+/', '', $app->mode);
   $app->config = Config::load(INC_ROOT . "/app/config/{$mode}.php");
@@ -32,6 +36,8 @@ $app->configureMode($app->config('mode'), function() use ($app) {
 
 require 'database.php';
 require 'routes.php';
+
+$app->auth = false;
 
 $app->container->set('user', function() {
   return new User;
