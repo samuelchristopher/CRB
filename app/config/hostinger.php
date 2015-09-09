@@ -6,7 +6,8 @@ return [
       'hash' => [
         'algo' => PASSWORD_BCRYPT,
         'cost' => 10
-      ],
+      ]
+    ],
       'db' => [
         'driver' => 'mysql',
         'host' => 'mysql.hostinger.co.uk',
@@ -36,5 +37,4 @@ return [
       'csrf' => [
         'session' => 'csrf_token'
       ]
-  ]
 ];
