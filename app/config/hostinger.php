@@ -2,6 +2,7 @@
 
 return [
   'app' => [
+      'name' => 'CRB',
       'url' => 'http://crb.esy.es',
       'hash' => [
         'algo' => PASSWORD_BCRYPT,

@@ -62,6 +62,8 @@ $app->container->singleton('mail', function() use ($app) {
   $mailer->Port = $app->config->get('mail.port');
   $mailer->Username = $app->config->get('mail.username');
   $mailer->Password = $app->config->get('mail.password');
+  $mailer->From = 'no-reply@crb.com';
+  $mailer->FromName = $app->config->get('app.name');
 
   $mailer->isHTML($app->config->get('mail.html'));
 

@@ -2,6 +2,7 @@
 
 return [
   'app' => [
+      'name' => 'CRB',
       'url' => 'http://thecrb.heroku.com',
       'hash' => [
         'algo' => PASSWORD_BCRYPT,
