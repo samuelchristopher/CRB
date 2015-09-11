@@ -13,6 +13,7 @@ use CRB\Helpers\Hash;
 use CRB\Validation\Validator;
 
 use CRB\Middleware\BeforeMiddleware;
+use CRB\Middleware\CsrfMiddleware;
 
 session_cache_limiter(false);
 session_start();
@@ -30,6 +31,7 @@ $app = new Slim([
 ]);
 
 $app->add(new BeforeMiddleware);
+$app->add(new CsrfMiddleware);
 
 $app->configureMode($app->config('mode'), function() use ($app) {
   $mode = preg_replace('/\s+/', '', $app->mode);

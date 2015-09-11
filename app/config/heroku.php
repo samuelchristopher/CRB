@@ -36,6 +36,6 @@ return [
         'debug' => false
       ],
       'csrf' => [
-        'session' => 'csrf_token'
+        'key' => 'csrf_token'
       ]
 ];

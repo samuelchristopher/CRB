@@ -83,6 +83,7 @@
         </div>
       {% endif %}
     </div>
+    <input type="hidden" name="{{csrf_key}}" value="{{ csrf_token }}">
     <div class="form-group">
       <button type="reset" class="btn btn-default">Cancel</button>
       <button type="submit" class="btn btn-primary">Register</button>
