@@ -29,11 +29,12 @@ $app->post('/login', function()  use ($app) {
       $_SESSION[$app->config->get('auth.session')] = $user->id;
 
       $app->flash('success', 'You are now signed in!');
+      $app->response->redirect($app->urlFor('home'));
 
     } else {
       $app->flash('danger', 'Could not log you in!');
+      $app->response->redirect($app->urlFor('login'));
     }
-    $app->response->redirect($app->urlFor('login'));
   }
 
   $app->render('auth/login.php', [
