@@ -43,4 +43,10 @@ class User extends Eloquent
       'active_hash' => null,
     ]);
   }
+
+  public function getAvatarUrl($options = [])
+  {
+    $size = isset($options['size']) ? $options['size']: 20;
+    return 'http://www.gravatar.com/avatar/' . md5($this->email) . '?s=' . $size. '&d=identicon';
+  }
 }
