@@ -3,7 +3,11 @@
 {% block title %}{{ user.getFullNameOrUsername() }}{% endblock %}
 
 {% block content %}
-<style media="screen">
+<style>
+  .panel {
+    padding: 10px;
+    border: none;
+  }
   .profile-container {
     display: flex;
     align-items: center;
@@ -29,19 +33,51 @@
       <a class="btn btn-primary btn-lg">Learn more</a>
     </p> -->
   </div>
-
-  {% if user.getFullName() %}
-    <div class="panel panel-default">
-      <div class="panel-heading">Full name</div>
+  <div class="row">
+    {% if user.getFullName() %}
+      <div class="panel panel-default col-md-4">
+        <div class="panel-heading">Full name</div>
+          <div class="panel-body">
+            {{ user.getFullName() }}
+          </div>
+      </div>
+    {% endif %}
+    <div class="panel panel-default col-md-4">
+      <div class="panel-heading">Company name</div>
         <div class="panel-body">
-          {{ user.getFullName() }}
+          {{ user.company_name }}
         </div>
     </div>
-  {% endif %}
-  <div class="panel panel-default">
-    <div class="panel-heading">Email</div>
-      <div class="panel-body">
-        {{ user.email }}
+
+    <div class="panel panel-default col-md-4">
+      <div class="panel-heading">Company address</div>
+        <div class="panel-body">
+          {{ user.company_address }}
+        </div>
+    </div>
+
+    <div class="panel panel-default col-md-4">
+      <div class="panel-heading">Email</div>
+        <div class="panel-body">
+          {{ user.email }}
+        </div>
+    </div>
+
+    {% if cert %}
+      <div class="panel panel-success col-md-4">
+        <div class="panel-heading">Certification Status</div>
+          <div class="panel-body">
+            {{ user.company_name }} Certified
+          </div>
       </div>
+    {% else %}
+      <div class="panel panel-info col-md-4">
+        <div class="panel-heading">Certification Status</div>
+          <div class="panel-body">
+            {{ user.company_name }} Not certified
+          </div>
+      </div>
+    {% endif %}
   </div>
+  
 {% endblock %}
