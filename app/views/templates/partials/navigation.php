@@ -35,6 +35,7 @@
         {% if auth %}
           <li><a href="#">Welcome {{auth.getFullNameOrUsername}}!</a></li>
           <li><a href="#"><img style="border-radius: 60%;" src="{{ auth.getAvatarUrl() }}" alt="{{ auth.username }}'s avatar'" /></a></li>
+          <li><a href="{{ urlFor('user.profile', {username: auth.username}) }}">Your profile</a></li>
           <li><a href="{{ urlFor('logout') }}">Log out</a></li>
         {% endif %}
         <!-- <li><a href="{{ urlFor('login') }}">Login</a></li> -->
