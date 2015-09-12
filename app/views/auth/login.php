@@ -32,6 +32,14 @@
         {% endif %}
       </div>
 
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="remember" id="remember"> Remember me
+          </label>
+        </div>
+      </div>
+
       <input type="hidden" name="{{csrf_key}}" value="{{ csrf_token }}">
 
       <div class="form-group">
