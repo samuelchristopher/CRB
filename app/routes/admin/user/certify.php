@@ -23,12 +23,15 @@ $app->post('/admin/user/certify/:username', $admin(), function($username) use ($
   $user = $app->user->where('username', $username)->first();
 
   if ($v->passes()) {
+    $app->mail->send('email/auth/certified.php', [  'user' => $user ], function($message) use ($user) {
+      $message->to($user->email);
+      $message->subject('You have been certified!');
+    });
 
+    $user->certifyAccount($link);
 
-      $user->certifyAccount($link);
-
-      $app->flash('success', 'Certification complete!');
-      $app->response->redirect($app->urlFor('admin.user.all'));
+    $app->flash('success', 'Certification complete!');
+    $app->response->redirect($app->urlFor('admin.user.all'));
   }
 
   $app->render('admin/user/certify.php', [

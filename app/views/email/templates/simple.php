@@ -20,7 +20,7 @@
 <!-- LOGO/PREHEADER TEXT --><tr>
 <td align="center" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important;"><tr>
-<td bgcolor="#ffffff" align="center" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><a href="#" target="_blank" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt="Logo" src="http://www.hnd-plus.com/assets/image/work_plan.png" width="60" height="60" style="display: block; font-family: Helvetica, Arial, sans-serif; color: #666666; font-size: 16px; -ms-interpolation-mode: bicubic; height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0;" border="0"></a></td>
+<td bgcolor="#ffffff" align="center" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><a href="#" target="_blank" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;"><img alt="Logo" src="http://litmuswww.s3.amazonaws.com/template-bundle/img/logo-1.jpg" width="60" height="60" style="display: block; font-family: Helvetica, Arial, sans-serif; color: #666666; font-size: 16px; -ms-interpolation-mode: bicubic; height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0;" border="0"></a></td>
                             </tr></table>
 </td>
                 </tr>

@@ -82,6 +82,10 @@
       </div>
     {% endif %}
   </div>
+  {% if auth.cert %}
+    <a href="{{ auth.cert }}" class="btn btn-primary">View certificate</a>
+  {% endif %}
+
 
   {% if auth.isAdmin %}
     <div class="row">
