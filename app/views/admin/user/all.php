@@ -26,6 +26,9 @@
       <div class="panel panel-success col-md-4">
         <div class="panel-heading">
           {{ user.username }}
+          {% if user.isAdmin %}
+            (Admin)
+          {% endif %}
           <br>
           <em>{{ user.company_name }}</em>
         </div>
@@ -37,6 +40,9 @@
         <div class="panel panel-default col-md-4">
           <div class="panel-heading">
             {{ user.username }}
+            {% if user.isAdmin %}
+              (Admin)
+            {% endif %}
             <br>
             <em>{{ user.company_name }}</em>
           </div>
