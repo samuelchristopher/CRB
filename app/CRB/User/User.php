@@ -77,4 +77,20 @@ class User extends Eloquent
   {
     return (bool) $this->hasPermission('is_admin');
   }
+
+  public function notCertified()
+  {
+    if (!$this->cert) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public function certifyAccount($link)
+  {
+    $this->update([
+      'cert' => $link
+    ]);
+  }
 }

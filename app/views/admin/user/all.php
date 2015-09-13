@@ -48,6 +48,7 @@
           </div>
             <div class="panel-body">
               <a href="{{ urlFor('user.profile',  {'username': user.username }) }}" class="btn btn-primary">View profile</a>
+              <a href="{{ urlFor('admin.user.certify', { username: user.username }) }}" class="btn btn-success">Certify</a>
             </div>
         </div>
       {% endif %}

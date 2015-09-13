@@ -22,6 +22,9 @@
     border-radius: 60%;
   }
 </style>
+  <div class="container">
+
+
   <div class="jumbotron" style="padding: 20px;">
     <div class="profile-container">
       <img src="{{ user.getAvatarUrl({size: 50}) }}" alt="{{user.getFullNameOrUsername}}'s profile picture" />
@@ -80,4 +83,13 @@
     {% endif %}
   </div>
 
+  {% if auth.isAdmin %}
+    <div class="row">
+      <div class="col-md-4">
+        <a href="{{ urlFor('admin.user.certify', {username: user.username}) }}" class="btn btn-success">Certify</a>
+      </div>
+    </div>
+  {% endif %}
+
+</div>
 {% endblock %}
