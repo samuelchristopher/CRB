@@ -63,21 +63,21 @@
         </div>
     </div>
 
-    {% if cert %}
+    {% if user.cert %}
       <div class="panel panel-success col-md-4">
         <div class="panel-heading">Certification Status</div>
           <div class="panel-body">
-            {{ user.company_name }} Certified
+            {{ user.company_name }} certified
           </div>
       </div>
     {% else %}
       <div class="panel panel-info col-md-4">
         <div class="panel-heading">Certification Status</div>
           <div class="panel-body">
-            {{ user.company_name }} Not certified
+            {{ user.company_name }} not certified
           </div>
       </div>
     {% endif %}
   </div>
-  
+
 {% endblock %}
