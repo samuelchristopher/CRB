@@ -10,7 +10,7 @@
       <a class="navbar-brand" href="{{ urlFor('home') }}">CRB</a>
     </div>
 
-    <div class="navbar-collapse collapse in" id="bs-example-navbar-collapse-1" aria-expanded="false">
+    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
       <ul class="nav navbar-nav">
         <li class="active"><a href="{{ urlFor('home') }}">Home <span class="sr-only">(current)</span></a></li>
         {% if auth %}
