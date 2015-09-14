@@ -11,3 +11,5 @@ require INC_ROOT . '/app/routes/user/profile.php';
 
 require INC_ROOT . '/app/routes/admin/user/all.php';
 require INC_ROOT . '/app/routes/admin/user/certify.php';
+
+require INC_ROOT . '/app/routes/errors/404.php';
