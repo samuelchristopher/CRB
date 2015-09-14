@@ -15,7 +15,7 @@
       <div class="form-group">
         <label class="control-label" for="identifier">Username/email</label>
         <input class="form-control" id="identifier" type="text" name="identifier" {% if request.post('identifier') %} value="{{ request.post('identifier') }}" {% endif %}>
-        {% if errors.first('Identifier') %}
+        {% if errors.has('Identifier') %}
           <div class="alert-error alert alert-danger" role="alert">
             {{ errors.first('Identifier') }}
           </div>
@@ -25,7 +25,7 @@
       <div class="form-group">
         <label class="control-label" for="password">Password</label>
         <input class="form-control" id="password" type="password" name="password">
-        {% if errors.first('Password') %}
+        {% if errors.has('Password') %}
           <div class="alert-error alert alert-danger" role="alert">
             {{ errors.first('Password') }}
           </div>

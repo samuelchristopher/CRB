@@ -7,13 +7,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ urlFor('home') }}">CRB</a>
+      <a class="navbar-brand" href="{{ urlFor('home') }}">{{ appName }}</a>
     </div>
 
     <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
       <ul class="nav navbar-nav">
         <li class="active"><a href="{{ urlFor('home') }}">Home <span class="sr-only">(current)</span></a></li>
         {% if auth %}
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profile<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{ urlFor('password.change') }}">Change password</a></li>
+              <!-- <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li> -->
+            </ul>
+          </li>
         {% else %}
           <li><a href="{{ urlFor('register') }}">Register</a></li>
           <li><a href="{{ urlFor('login') }}">Login</a></li>
@@ -23,12 +35,12 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="{{ urlFor('admin.user.all') }}">All users</a></li>
-              <li><a href="#">Another action</a></li>
+              <!-- <li><a href="#">Another action</a></li>
               <li><a href="#">Something else here</a></li>
               <li class="divider"></li>
               <li><a href="#">Separated link</a></li>
               <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="#">One more separated link</a></li> -->
             </ul>
           </li>
         {% endif %}
