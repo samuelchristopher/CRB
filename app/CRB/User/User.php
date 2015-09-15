@@ -39,6 +39,11 @@ class User extends Eloquent
     return $this->getFullName() ?: $this->username;
   }
 
+  public function getFirstNameOrUsername()
+  {
+    return $this->first_name ?: $this->username;
+  }
+
   public function activateAccount()
   {
     $this->update([

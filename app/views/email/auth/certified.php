@@ -3,7 +3,7 @@
 {% block preheader %}You have been certified{% endblock %}
 {% block toptext %}{{ appName }}{% endblock %}
 
-{% block title %}Hey {{ user.getFullNameOrUsername }}!{% endblock %}
+{% block title %}Hey {{ user.getFirstNameOrUsername }}!{% endblock %}
 
 {% block paragraph %}You have been certified by {{ appName }}! Click on the button below to have a look at your profile and go ahead and view your certificate!!{% endblock %}
 
