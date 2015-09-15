@@ -11,15 +11,15 @@ $app->get('/password-reset', $guest(), function() use ($app) {
   $user = $app->user->where('email', $email)->first();
 
   if (!$user) {
-    $app->response->redirect($app->urlFor('home'));
+    return $app->response->redirect($app->urlFor('home'));
   }
 
   if (!$user->recover_hash) {
-    $app->response->redirect($app->urlFor('home'));
+    return $app->response->redirect($app->urlFor('home'));
   }
 
   if (!$app->hash->hashCheck($user->recover_hash, $hashedIdentifier)) {
-    $app->response->redirect($app->urlFor('home'));
+    return $app->response->redirect($app->urlFor('home'));
   }
 
 
@@ -46,15 +46,15 @@ $app->post('/password-reset', $guest(), function() use ($app) {
   $user = $app->user->where('email', $email)->first();
 
   if (!$user) {
-    $app->response->redirect($app->urlFor('home'));
+    return $app->response->redirect($app->urlFor('home'));
   }
 
   if (!$user->recover_hash) {
-    $app->response->redirect($app->urlFor('home'));
+    return $app->response->redirect($app->urlFor('home'));
   }
 
   if (!$app->hash->hashCheck($user->recover_hash, $hashedIdentifier)) {
-    $app->response->redirect($app->urlFor('home'));
+    return $app->response->redirect($app->urlFor('home'));
   }
 
   $v = $app->validation;
@@ -71,7 +71,7 @@ $app->post('/password-reset', $guest(), function() use ($app) {
     ]);
 
     $app->flash('success', 'Your password has been reset!');
-    $app->response->redirect($app->urlFor('login'));
+    return $app->response->redirect($app->urlFor('login'));
   }
 
   $app->render('auth/password/reset.php', [

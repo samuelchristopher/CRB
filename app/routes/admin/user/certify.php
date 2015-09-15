@@ -31,7 +31,7 @@ $app->post('/admin/user/certify/:username', $admin(), function($username) use ($
     $user->certifyAccount($link);
 
     $app->flash('success', 'Certification complete!');
-    $app->response->redirect($app->urlFor('admin.user.all'));
+    return $app->response->redirect($app->urlFor('admin.user.all'));
   }
 
   $app->render('admin/user/certify.php', [

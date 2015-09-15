@@ -52,11 +52,11 @@ $app->post('/login', $guest(), function()  use ($app) {
       }
 
       $app->flash('success', 'You are now signed in!');
-      $app->response->redirect($app->urlFor('user.profile', [ 'username'=> $user->username ]));
+      return $app->response->redirect($app->urlFor('user.profile', [ 'username'=> $user->username ]));
 
     } else {
       $app->flash('danger', 'Could not log you in!');
-      $app->response->redirect($app->urlFor('login'));
+      return $app->response->redirect($app->urlFor('login'));
     }
   }
 

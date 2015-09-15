@@ -15,12 +15,12 @@ $app->get('/activate', $guest(), function() use ($app) {
 
   if (!$user || !$app->hash->hashCheck($user->active_hash, $hashedIdentifier)) {
     $app->flash('danger', 'There was a problem activating your account');
-    $app->response->redirect($app->urlFor('home'));
+    return $app->response->redirect($app->urlFor('home'));
   } else {
     $user->activateAccount();
 
     $app->flash('success', 'Your account has been activated and you can sign in!');
-    $app->response->redirect($app->urlFor('login'));
+    return $app->response->redirect($app->urlFor('login'));
   }
 
 })->name('activate');
