@@ -38,6 +38,7 @@
             <input type="checkbox" name="remember" id="remember"> Remember me
           </label>
         </div>
+        <a href="{{ urlFor('password.recover') }}">Forgot your password?</a>
       </div>
 
       <input type="hidden" name="{{csrf_key}}" value="{{ csrf_token }}">
