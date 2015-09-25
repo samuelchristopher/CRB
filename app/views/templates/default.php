@@ -4,7 +4,7 @@
     <!-- This website was made by Samuel Paul Christopher -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %} | CRB</title>
+    <title>{% block title %}{% endblock %} | {{  appName }}</title>
     <!-- Latest compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 
@@ -18,6 +18,9 @@
     <div class="container">
       {% block content %}{% endblock %}
     </div>
+    {% if auth.isAdmin %}
+      {% include 'templates/partials/counter.php' %}
+    {% endif %}
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
