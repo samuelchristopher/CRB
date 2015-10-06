@@ -22,7 +22,7 @@
           padding: 0;
       }
       .intro-effect-jam3 .bg-img {
-        top: -55px;
+        top: 0;
       }
     </style>
     <header class="header">
@@ -54,7 +54,7 @@
         <p>Our business values are: <strong>Customer Focus</strong>, <strong>Partnership</strong>, <strong>Mutual beneficial partner relationship</strong>, <strong>Quantity</strong>, <strong>Teamwork</strong> and <strong>Continual Improvement</strong></p>
 
         <p>
-          Have a look at the <strong><a href="#">services</a> we offer</strong>
+          Have a look at the <strong><a href="{{ urlFor('company.services') }}">services</a></strong> we offer
         </p>
       </div>
     </article>
