@@ -163,13 +163,13 @@ Mill, Original Equipment Certificates, Inspection and Test status (with colour c
           Reject Equipment List (Red Colour Code)
         </p>
 
+        <hr>
         <p>
           Get started by <a href="{{ urlFor('login') }}">logging in</a> or <a href="{{ urlFor('register') }}">registering</a>
         </p>
         <p>
           <div class="elevator-button">
-            <img src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png" alt="" style="height: 72px;margin-left: -17px;transform:rotate(180deg);cursor:pointer;"/>
-            
+            <img src="http://www.zimedcode.com/blog/wp-content/uploads/2014/11/back-to-top-button.png" alt="" style="height: 72px;margin-left: -17px;cursor:pointer;-webkit-filter:invert(100%);"/>
           </div>
         </p>
       </div>

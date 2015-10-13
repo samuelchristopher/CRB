@@ -26,7 +26,7 @@
       }
     </style>
     <header class="header">
-      <div class="bg-img"><img src="http://tympanus.net/Development/ArticleIntroEffects/img/1.jpg" alt="Background Image" /></div>
+      <div class="bg-img"><img src="http://cdn.3news.co.nz/3news/AM/2013/5/8/297005/construction-1200.jpg" style="-webkit-filter: blur(5px);" alt="Background Image" /></div>
       <div class="title">
         <h1>Classic Realiance Beurau</h1>
         <p class="subline">Inspections, testing and services</p>
