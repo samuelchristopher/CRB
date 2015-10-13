@@ -7,6 +7,8 @@ use Slim\Views\TwigExtension;
 use Noodlehaus\Config;
 use RandomLib\Factory as RandomLib;
 
+use Mailgun\Mailgun;
+
 use CRB\User\User;
 use CRB\Mail\Mailer;
 use CRB\Helpers\Hash;
@@ -57,20 +59,9 @@ $app->container->singleton('validation', function() use ($app) {
 });
 
 $app->container->singleton('mail', function() use ($app) {
-  $mailer = new PHPMailer;
+  $mailer = new Mailgun($app->config->get('mail.secret'));
 
-  $mailer->Host = $app->config->get('mail.host');
-  $mailer->SMTPAuth = $app->config->get('mail.smtp_auth');
-  $mailer->SMTPSecure = $app->config->get('mail.smtp_secure');
-  $mailer->Port = $app->config->get('mail.port');
-  $mailer->Username = $app->config->get('mail.username');
-  $mailer->Password = $app->config->get('mail.password');
-  $mailer->From = 'no-reply@crb.com';
-  $mailer->FromName = $app->config->get('app.name');
-
-  $mailer->isHTML($app->config->get('mail.html'));
-
-  return new Mailer($app->view, $mailer);
+  return new Mailer($app->view, $app->config, $mailer);
 });
 
 $app->container->singleton('randomlib', function() {

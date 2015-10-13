@@ -24,13 +24,9 @@ return [
         'remember' => 'user_r',
       ],
       'mail' => [
-        'smtp_auth' => true,
-        'smtp_secure' => 'tls',
-        'host' => 'smtp.gmail.com',
-        'username' => 'testemailofmine@gmail.com',
-        'password' => 'testemailofmine123',
-        'port' => '587',
-        'html' => true
+        'secret' => 'key-0d5e1ea82f3ce1d6e01f33998bb15b31',
+        'domain' => 'sandbox5074423a27aa40aeac8a3b5b34b58e27.mailgun.org',
+        'from' => 'CRB <hello@crb.com>',
       ],
       'twig' => [
         'debug' => false
