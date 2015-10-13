@@ -51,7 +51,7 @@
         </div>
       {% endif %}
     </div>
-    <h1>{{ appName }} Details</h1>
+    <h1>Client Details</h1>
     <hr>
 
     <div class="form-group">

@@ -3,7 +3,7 @@
 {% block preheader %}You have changed your password{% endblock %}
 {% block toptext %}{{ appName }}{% endblock %}
 
-{% block title %}Hey {{ user.getFirstNameOrUsername }}!{% endblock %}
+{% block title %}Hi {{ user.getFirstNameOrUsername }}!{% endblock %}
 
 {% block paragraph %}You have recently changed your password.{% endblock %}
 
