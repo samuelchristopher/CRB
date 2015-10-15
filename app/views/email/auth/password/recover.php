@@ -3,7 +3,7 @@
 {% block preheader %}You requested a password change{% endblock %}
 {% block toptext %}{{ appName }}{% endblock %}
 
-{% block title %}Hi {{ user.getFirstNameOrUsername }}!{% endblock %}
+{% block title %}Hello {{ user.getFirstNameOrUsername }}!{% endblock %}
 
 {% block paragraph %}You have recently requested a password change. Click the button to follow through the password reset proccess{% endblock %}
 

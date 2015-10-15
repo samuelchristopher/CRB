@@ -66,8 +66,28 @@
         </div>
     </div>
 
+
+
     {% if auth.isAdmin %}
+      {% if user.comment %}
+        <div class="panel panel-primary col-md-4">
+          <div class="panel-heading">Comment</div>
+            <div class="panel-body">
+              {{ user.comment }}
+            </div>
+        </div>
+      {% endif %}
     {% else %}
+      {% if auth %}
+        {% if auth.comment %}
+          <div class="panel panel-primary col-md-4">
+            <div class="panel-heading">Comment</div>
+              <div class="panel-body">
+                {{ auth.comment }}
+              </div>
+          </div>
+        {% endif %}
+      {% endif %}
       {% if user.cert %}
         <div class="panel panel-success col-md-4">
           <div class="panel-heading">Certification Status</div>
@@ -94,6 +114,7 @@
     <div class="row">
       <div class="col-md-4">
         <a href="{{ urlFor('admin.user.certify', {username: user.username}) }}" class="btn btn-success">Certify</a>
+        <a href="{{ urlFor('admin.user.comment', {username: user.username}) }}" class="btn btn-primary">Comment</a>
       </div>
     </div>
   {% endif %}
