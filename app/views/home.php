@@ -24,9 +24,52 @@
       .intro-effect-jam3 .bg-img {
         top: 0;
       }
+      .navbar-default .navbar-nav>li>a {
+        font-family: "Raleway", "Source Sans Pro",sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        transition: all 200ms ease-in-out;
+      }
+
+      .navbar-default .navbar-nav>li>a:hover {
+        color: seashell;
+      }
+
+      .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:hover {
+        color: seashell;
+      }
+
+      .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand>a:hover {
+        color: seashell;
+      }
+      nav.navbar.navbar-default {
+        background: none;
+        border: none;
+        width: 100vw;
+        position: absolute;
+        z-index: 99;
+      }
+
+      .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a {
+        font-family: "Raleway", "Source Sans Pro",sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .navbar-default , .navbar-default .navbar-brand {
+        font-family: "Raleway", "Source Sans Pro",sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+      }
     </style>
     <header class="header">
-      <div class="bg-img"><img src="http://cdn.3news.co.nz/3news/AM/2013/5/8/297005/construction-1200.jpg" style="-webkit-filter: blur(5px);" alt="Background Image" /></div>
+      <div class="bg-img">
+        <div class="" style="opacity: 0.5;height: 101vh;width: 101vw;background-image: url(https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&amp;fm=jpg&amp;s=4bf1164d23eea4f04aeefe1732149cf3);background-position: center;margin: 0;background-size: cover;background-repeat: no-repeat;">
+        </div>
+      </div>
       <div class="title">
         <h1>Classic Realiance Beurau</h1>
         <p class="subline">Inspections, testing and services</p>

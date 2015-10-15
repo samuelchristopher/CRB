@@ -7,6 +7,7 @@
     <!-- Top Navigation -->
     <link rel="stylesheet" href="http://tympanus.net/Development/ArticleIntroEffects/css/demo.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="http://tympanus.net/Development/ArticleIntroEffects/css/component.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" charset="utf-8">
     <style>
       .container {
         width: 100%;
@@ -23,9 +24,49 @@
       .intro-effect-jam3 .bg-img {
         top: 0;
       }
+      .navbar-default .navbar-nav>li>a {
+        font-family: "Raleway", "Source Sans Pro",sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        transition: all 200ms ease-in-out;
+      }
+
+      .navbar-default .navbar-nav>li>a:hover {
+        color: seashell;
+      }
+
+      .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:hover {
+        color: seashell;
+      }
+
+      .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand>a:hover {
+        color: seashell;
+      }
+      nav.navbar.navbar-default {
+        background: none;
+        border: none;
+        width: 100vw;
+        position: absolute;
+        z-index: 99;
+      }
+
+      .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a {
+        font-family: "Raleway", "Source Sans Pro",sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .navbar-default , .navbar-default .navbar-brand {
+        font-family: "Raleway", "Source Sans Pro",sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+      }
     </style>
     <header class="header">
-      <div class="bg-img"><img src="http://tympanus.net/Development/ArticleIntroEffects/img/2.jpg" alt="Background Image" /></div>
+      <div class="bg-img" style="background-color:#69606b;"><div class="" style="opacity: 0.5;height: 101vh;width: 101vw;background-image: url(http://www.jeraby-online.cz/wp-content/uploads/2015/09/construction-926148_1280.jpg);background-position: center;margin: 0;background-size: cover;background-repeat: no-repeat;"></div>
       <div class="title">
         <h1>Services provided</h1>
         <p class="subline">Certification services</p>
@@ -164,8 +205,8 @@ Mill, Original Equipment Certificates, Inspection and Test status (with colour c
         </p>
 
         <hr>
-        <p>
-          Get started by <a href="{{ urlFor('login') }}">logging in</a> or <a href="{{ urlFor('register') }}">registering</a>
+        <p id="cta">
+          Get started by <a href="{{ urlFor('login') }}" id="login">logging in</a> or <a href="{{ urlFor('register') }}" id="register">registering</a>
         </p>
         <p>
           <div class="elevator-button">
@@ -178,6 +219,21 @@ Mill, Original Equipment Certificates, Inspection and Test status (with colour c
   <script src="http://tympanus.net/Development/ArticleIntroEffects/js/classie.js"></script>
   <script type="text/javascript">
     var Elevator=function(n){"use strict";function e(n,e,o,t){return n/=t/2,1>n?o/2*n*n+e:(n--,-o/2*(n*(n-2)-1)+e)}function o(n,e){for(var o in e){var t=void 0===n[o]&&"function"!=typeof o;t&&(n[o]=e[o])}return n}function t(n){for(var e=0;n;)e+=n.offsetTop||0,n=n.offsetParent;return e}function i(n){w||(w=n);var o=n-w,t=e(o,E,T-E,p);window.scrollTo(0,t),p>o?A=requestAnimationFrame(i):l()}function u(){return window.requestAnimationFrame&&window.Audio&&window.addEventListener}function r(){w=null,E=null,b=!1}function l(){r(),m&&(m.pause(),m.currentTime=0),s&&s.play()}function d(){b&&(cancelAnimationFrame(A),r(),m&&(m.pause(),m.currentTime=0),window.scrollTo(0,T))}function a(n){n.addEventListener?n.addEventListener("click",y.elevate,!1):n.attachEvent("onclick",function(){document.documentElement.scrollTop=T,document.body.scrollTop=T,window.scroll(0,T)})}function c(n){f=document.body;var e={duration:void 0,mainAudio:!1,endAudio:!1,preloadAudio:!0,loopAudio:!0};n=o(n,e),n.element&&a(n.element),u()&&(n.duration&&(v=!0,p=n.duration),n.targetElement&&(T=t(n.targetElement)),window.addEventListener("blur",d,!1),n.mainAudio&&(m=new Audio(n.mainAudio),m.setAttribute("preload",n.preloadAudio),m.setAttribute("loop",n.loopAudio)),n.endAudio&&(s=new Audio(n.endAudio),s.setAttribute("preload","true")))}var m,s,f=null,A=null,p=null,v=!1,w=null,E=null,T=0,b=!1,y=this;this.elevate=function(){b||(b=!0,E=document.documentElement.scrollTop||f.scrollTop,v||(p=1.5*E),requestAnimationFrame(i),m&&m.play())},c(n)};
+  </script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(function() {
+      window.setInterval(
+        function() {
+          var items = ['#login', '#register'];
+          var item  = Math.floor((Math.random() * 2) + 1);
+          var index = item - 1;
+          var selector = items[index];
+
+          $(selector).toggleClass('animated tada');
+        }
+        , 1000);
+    });
   </script>
   <script>
     (function() {
