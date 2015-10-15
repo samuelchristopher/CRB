@@ -66,24 +66,27 @@
         </div>
     </div>
 
-    {% if user.cert %}
-      <div class="panel panel-success col-md-4">
-        <div class="panel-heading">Certification Status</div>
-          <div class="panel-body">
-            {{ user.company_name }} certified
-          </div>
-      </div>
+    {% if auth.isAdmin %}
     {% else %}
-      <div class="panel panel-info col-md-4">
-        <div class="panel-heading">Certification Status</div>
-          <div class="panel-body">
-            {{ user.company_name }} not certified
-          </div>
-      </div>
+      {% if user.cert %}
+        <div class="panel panel-success col-md-4">
+          <div class="panel-heading">Certification Status</div>
+            <div class="panel-body">
+              {{ user.company_name }} certified
+            </div>
+        </div>
+      {% else %}
+        <div class="panel panel-info col-md-4">
+          <div class="panel-heading">Certification Status</div>
+            <div class="panel-body">
+              {{ user.company_name }} not certified
+            </div>
+        </div>
+      {% endif %}
     {% endif %}
   </div>
   {% if auth.cert %}
-    <a href="{{ auth.cert }}" class="btn btn-primary">View certificate</a>
+    <a href="{{ auth.cert }}" target="_blank" class="btn btn-primary">View certificate</a>
   {% endif %}
 
 
