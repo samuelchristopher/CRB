@@ -48,7 +48,7 @@
         border: none;
         width: 100vw;
         position: absolute;
-        z-index: 99;
+        z-index: 2;
       }
 
       .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a {
