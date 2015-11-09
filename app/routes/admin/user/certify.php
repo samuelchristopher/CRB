@@ -13,14 +13,17 @@ $app->post('/admin/user/certify/:username', $admin(), function($username) use ($
   $request = $app->request;
 
   $link = $request->post('link');
+  $name = $request->post('name');
 
   $v = $app->validation;
 
   $v->validate([
+    'Certificate name' => [$name, 'required'],
     'Certification link' => [$link, 'required|url']
   ]);
 
   $user = $app->user->where('username', $username)->first();
+
 
   if ($v->passes()) {
     $app->mail->send('email/auth/certified.php', [  'user' => $user ], function($message) use ($user) {
@@ -28,7 +31,12 @@ $app->post('/admin/user/certify/:username', $admin(), function($username) use ($
       $message->subject('You have been certified!');
     });
 
-    $user->certifyAccount($link);
+    $user->certs()->create([
+        'certificate_name' => $name,
+        'certificate_url' => $link
+    ]);
+
+    // $user->certifyAccount($link);
 
     $app->flash('success', 'Certification complete!');
     return $app->response->redirect($app->urlFor('admin.user.all'));

@@ -102,4 +102,9 @@ class User extends Eloquent
       'cert' => $link
     ]);
   }
+
+  public function certs()
+  {
+    return $this->hasMany('CRB\User\C', 'user_id');
+  }
 }

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2015 at 06:58 AM
+-- Generation Time: Nov 09, 2015 at 09:46 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -23,25 +23,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `certs`
+-- Table structure for table `certificates`
 --
 
-CREATE TABLE IF NOT EXISTS `certs` (
+CREATE TABLE IF NOT EXISTS `certificates` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `cert_url` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `certificate_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `certificate_url` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `certs`
+-- Indexes for table `certificates`
 --
-ALTER TABLE `certs`
+ALTER TABLE `certificates`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -49,10 +50,10 @@ ALTER TABLE `certs`
 --
 
 --
--- AUTO_INCREMENT for table `certs`
+-- AUTO_INCREMENT for table `certificates`
 --
-ALTER TABLE `certs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `certificates`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

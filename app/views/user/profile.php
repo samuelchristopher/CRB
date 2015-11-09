@@ -88,27 +88,8 @@
           </div>
         {% endif %}
       {% endif %}
-      {% if user.cert %}
-        <div class="panel panel-success col-md-4">
-          <div class="panel-heading">Certification Status</div>
-            <div class="panel-body">
-              {{ user.company_name }} certified
-            </div>
-        </div>
-      {% else %}
-        <div class="panel panel-info col-md-4">
-          <div class="panel-heading">Certification Status</div>
-            <div class="panel-body">
-              {{ user.company_name }} not certified
-            </div>
-        </div>
-      {% endif %}
     {% endif %}
   </div>
-  {% if auth.cert %}
-    <a href="{{ auth.cert }}" target="_blank" class="btn btn-primary">View certificate</a>
-  {% endif %}
-
 
   {% if auth.isAdmin %}
     <div class="row">
@@ -118,6 +99,18 @@
       </div>
     </div>
   {% endif %}
+
+
+  {% if auth %}
+    {% if cs %}
+      <hr>
+      <h3>{{ auth.getFirstNameOrUsername }}'s certificates</h3>
+      {% for c in cs %}<a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>{% endfor %}
+    {% endif %}
+  {% endif %}
+
+
+
 
 </div>
 {% endblock %}

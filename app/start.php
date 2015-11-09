@@ -10,7 +10,7 @@ use RandomLib\Factory as RandomLib;
 use Mailgun\Mailgun;
 
 use CRB\User\User;
-use CRB\Cert\Cert;
+// use CRB\Cert\Cert;
 use CRB\Mail\Mailer;
 use CRB\Helpers\Hash;
 use CRB\Validation\Validator;
@@ -51,9 +51,9 @@ $app->container->set('user', function() {
   return new User;
 });
 
-$app->container->set('cert', function() {
-  return new Cert;
-});
+// $app->container->set('cert', function() {
+//   return new Cert;
+// });
 
 $app->container->singleton('hash', function() use ($app){
   return new Hash($app->config);

@@ -24,3 +24,4 @@ require INC_ROOT . '/app/routes/account/profile.php';
 
 // Dev routes
 require INC_ROOT . '/app/routes/dev/main.php';
+require INC_ROOT . '/app/routes/test.php';
