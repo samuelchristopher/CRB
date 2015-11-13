@@ -79,6 +79,7 @@
     <button class="trigger" data-info="Scroll down"><img src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png" alt="" style="    -webkit-filter:invert(100%);height: 72px;margin-left: -17px;"/></button>
     <article class="content">
       <div>
+        <img src="http://classicreliancebureau.com/images/confirm_layout_r1_c1.jpg" alt="" style="transform: translateX(211px); margin-bottom: 65px" />
         <h3>Vision and Mission Statement</h3>
         <p>Become a leading total solution provider for Quality, Health, Safety, Security and Environment Management Systems for the global business community.</p>
 
