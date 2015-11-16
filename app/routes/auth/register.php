@@ -54,8 +54,8 @@ $app->post('/register', $guest(), function() use ($app) {
       $message->subject('Thanks for registering!');
     });
 
-    $app->flash('success', 'You have been registered!');
-    return $app->response->redirect($app->urlFor('home'));
+    $app->flash('success', 'You have been registered! Check your email to activate your account!');
+    return $app->response->redirect($app->urlFor('login'));
   }
 
   $app->render('auth/register.php', [

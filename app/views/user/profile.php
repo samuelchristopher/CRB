@@ -101,11 +101,18 @@
   {% endif %}
 
 
-  {% if auth %}
+  {% if auth.isAdmin %}
+  {% else %}
     {% if cs %}
       <hr>
       <h3>{{ auth.getFirstNameOrUsername }}'s certificates</h3>
-      {% for c in cs %}<a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>{% endfor %}
+      {% if cs is empty %}
+        <p>
+          You have no certificates yet.
+        </p>
+      {% else %}
+        {% for c in cs %}<a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>{% endfor %}
+      {% endif %}
     {% endif %}
   {% endif %}
 
