@@ -1,10 +1,12 @@
 <?php
 
+use Carbon\Carbon;
+
 $app->get('/u/:username', function($username) use ($app) {
 
   $user = $app->user->where('username', $username)->first();
 
-
+  $now = Carbon::now()->timestamp;
 
   // $certificates = $app->cert->where('user_id', $user->id)->get();
 
@@ -25,7 +27,8 @@ $app->get('/u/:username', function($username) use ($app) {
 
   $app->render('user/profile.php', [
     'user' => $user,
-    'cs' => $cs
+    'cs' => $cs,
+    'now' => $now
     // 'certificates' => $certificates
   ]);
 })->name('user.profile');

@@ -19,5 +19,6 @@ require INC_ROOT . '/app/routes/admin/user/certify.php';
 require INC_ROOT . '/app/routes/admin/user/comment.php';
 
 require INC_ROOT . '/app/routes/errors/404.php';
+require INC_ROOT . '/app/routes/errors/expired.php';
 
 require INC_ROOT . '/app/routes/account/profile.php';

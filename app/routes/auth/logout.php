@@ -11,6 +11,6 @@ $app->get('/logout', $authenticated(), function() use ($app) {
   }
 
   $app->flash('success', 'You have been logged out');
-  return $app->response->redirect($app->urlFor('home'));
+  return $app->response->redirect($app->urlFor('login'));
 
 })->name('logout');

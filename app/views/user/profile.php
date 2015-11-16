@@ -120,7 +120,13 @@
             <span style="text-transform: capitalize;">{{ user.getFirstNameOrUsername }}</span> has no certificates yet.
           </p>
         {% else %}
-          {% for c in cs %}<a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>{% endfor %}
+          {% for c in cs %}
+            {% if now > c.certificate_expires %}
+              <a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }} (Expired)</a>
+            {% else %}
+              <a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>
+            {% endif %}
+          {% endfor %}
         {% endif %}
       {% endif %}
     {% endif %}
@@ -133,7 +139,14 @@
           <span style="text-transform: capitalize;">{{ auth.getFirstNameOrUsername }}</span> has no certificates yet.
         </p>
       {% else %}
-        {% for c in cs %}<a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>{% endfor %}
+        {% for c in cs %}
+          {% if now > c.certificate_expires %}
+            <a class="btn btn-primary" style="margin-right: 10px" href="{{ urlFor('expired') }}" target="_blank">{{ c.certificate_name }} (Expired)</a>
+          {% else %}
+            <a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>
+
+          {% endif %}
+        {% endfor %}
       {% endif %}
     {% endif %}
   {% endif %}

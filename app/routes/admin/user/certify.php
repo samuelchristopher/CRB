@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 $app->get('/admin/user/certify/:username', $admin(), function($username) use ($app) {
   $user = $app->user->where('username', $username)->first();
 
@@ -14,16 +16,18 @@ $app->post('/admin/user/certify/:username', $admin(), function($username) use ($
 
   $link = $request->post('link');
   $name = $request->post('name');
+  $time = $request->post('time');
 
   $v = $app->validation;
 
   $v->validate([
     'Certificate name' => [$name, 'required'],
-    'Certification link' => [$link, 'required|url']
+    'Certification link' => [$link, 'required|url'],
+    'Certification validity' => [$time, 'required']
   ]);
 
   $user = $app->user->where('username', $username)->first();
-
+  $timestamp = Carbon::parse("+{$time}")->timestamp;
 
   if ($v->passes()) {
     $app->mail->send('email/auth/certified.php', [  'user' => $user ], function($message) use ($user) {
@@ -33,7 +37,8 @@ $app->post('/admin/user/certify/:username', $admin(), function($username) use ($
 
     $user->certs()->create([
         'certificate_name' => $name,
-        'certificate_url' => $link
+        'certificate_url' => $link,
+        'certificate_expires' => $timestamp
     ]);
 
     // $user->certifyAccount($link);

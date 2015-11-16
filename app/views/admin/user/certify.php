@@ -34,6 +34,17 @@
         {% endif %}
       </div>
 
+      <div class="form-group">
+        <label class="control-label" for="time">Certification validity</label>
+        <input class="form-control" id="time" type="text" name="time" {% if request.post('time') %} value="{{ request.post('time') }}" {% endif %} placeholder="E.g. 1 week" >
+        {% if errors.first('Certification validity') %}
+          <div class="alert-error alert alert-danger" role="alert">
+            {{ errors.first('Certification validity') }}
+          </div>
+        {% endif %}
+      </div>
+
+
 
 
 

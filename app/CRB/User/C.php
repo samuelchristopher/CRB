@@ -11,5 +11,6 @@ class C extends Eloquent
   protected $fillable = [
     'certificate_name',
     'certificate_url',
+    'certificate_expires'
   ];
 }

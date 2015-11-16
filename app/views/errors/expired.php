@@ -1,13 +1,13 @@
 {% extends 'templates/default.php' %}
 
-{% block title %}404{% endblock %}
+{% block title %}Expired{% endblock %}
 
 {% block content %}
   <div class="container">
     <div class="jumbotron" style="padding: 20px;">
-      <h1>404</h1>
+      <h1>Certificate expired</h1>
       <p>
-        That page can't be found.
+        This certificate is no longer valid and is inaccessible.
       </p>
     </div>
   </div>
