@@ -10,8 +10,8 @@
       margin-bottom: 0;
     }
   </style>
-  <h1>{{ user.getFullNameOrUsername() }} | {{  user.company_name}}</h1>
   <div class="container">
+    <h1>{{ user.getFullNameOrUsername() }} | {{  user.company_name}}</h1>
     <form class="form-horizontal" action="{{ urlFor('admin.user.comment.post', { username: user.username }) }}"  method="post">
       <div class="form-group">
         <label class="control-label" for="comment">Comment</label>

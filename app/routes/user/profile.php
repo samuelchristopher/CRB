@@ -16,7 +16,9 @@ $app->get('/u/:username', function($username) use ($app) {
 
   if (!$app->auth) {
     $cs = [];
-  } else {
+  } elseif ($app->auth->isAdmin()) {
+    $cs = $user->certs()->get();
+  }else {
     $cs = $app->auth->certs()->get();
   }
 

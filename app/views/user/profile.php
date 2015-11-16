@@ -92,23 +92,45 @@
   </div>
 
   {% if auth.isAdmin %}
-    <div class="row">
-      <div class="col-md-4">
-        <a href="{{ urlFor('admin.user.certify', {username: user.username}) }}" class="btn btn-success">Certify</a>
-        <a href="{{ urlFor('admin.user.comment', {username: user.username}) }}" class="btn btn-primary">Comment</a>
+    {% if auth.username == user.username %}
+      <div class="row">
+        <div class="col-md-4">
+          <a href="{{ urlFor('admin.user.all') }}" class="btn btn-success">All users</a>
+        </div>
       </div>
-    </div>
+    {% else %}
+      <div class="row">
+        <div class="col-md-4">
+          <a href="{{ urlFor('admin.user.certify', {username: user.username}) }}" class="btn btn-success">Certify</a>
+          <a href="{{ urlFor('admin.user.comment', {username: user.username}) }}" class="btn btn-primary">Comment</a>
+        </div>
+      </div>
+    {% endif %}
   {% endif %}
 
 
   {% if auth.isAdmin %}
+    {% if auth.username == user.username %}
+    {% else %}
+      {% if cs %}
+        <hr>
+        <h3><span style="text-transform: capitalize;">{{ user.getFirstNameOrUsername }}</span>'s certificates</h3>
+        {% if cs is empty %}
+          <p>
+            <span style="text-transform: capitalize;">{{ user.getFirstNameOrUsername }}</span> has no certificates yet.
+          </p>
+        {% else %}
+          {% for c in cs %}<a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>{% endfor %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
   {% else %}
     {% if cs %}
       <hr>
-      <h3>{{ auth.getFirstNameOrUsername }}'s certificates</h3>
+      <h3><span style="text-transform: capitalize;">{{ auth.getFirstNameOrUsername }}</span>'s certificates</h3>
       {% if cs is empty %}
         <p>
-          You have no certificates yet.
+          <span style="text-transform: capitalize;">{{ auth.getFirstNameOrUsername }}</span> has no certificates yet.
         </p>
       {% else %}
         {% for c in cs %}<a class="btn btn-primary" style="margin-right: 10px" href="{{ c.certificate_url }}" target="_blank">{{ c.certificate_name }}</a>{% endfor %}
