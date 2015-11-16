@@ -3,247 +3,144 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div id="container" class="container intro-effect-jam3">
-    <!-- Top Navigation -->
-    <link rel="stylesheet" href="http://tympanus.net/Development/ArticleIntroEffects/css/demo.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="http://tympanus.net/Development/ArticleIntroEffects/css/component.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="screen" title="no title" charset="utf-8">
-    <style>
-      .container {
-        width: 100%;
-        padding: 0;
-      }
+
+  <link rel="stylesheet" href="https://getbootstrap.com/examples/carousel/carousel.css">
+  <style>
       nav.navbar.navbar-default {
-          margin-bottom: 0;
-          font-size: 15px;
-          font-family: "Source Sans Pro", sans-serif;
+        margin: 0;
       }
-      div#container {
-          padding: 0;
-      }
-      .intro-effect-jam3 .bg-img {
-        top: 0;
-      }
-      .navbar-default .navbar-nav>li>a {
-        font-family: "Raleway", "Source Sans Pro",sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: white;
-        transition: all 200ms ease-in-out;
-      }
-
-      .navbar-default .navbar-nav>li>a:hover {
-        color: seashell;
-      }
-
-      .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:hover {
-        color: seashell;
-      }
-
-      .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand>a:hover {
-        color: seashell;
-      }
-      nav.navbar.navbar-default {
-        background: none;
-        border: none;
-        width: 100vw;
-        position: absolute;
-        z-index: 2;
-      }
-
-      .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a {
-        font-family: "Raleway", "Source Sans Pro",sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: white;
-      }
-
-      .navbar-default , .navbar-default .navbar-brand {
-        font-family: "Raleway", "Source Sans Pro",sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: white;
-      }
-    </style>
-    <header class="header">
-      <div class="bg-img">
-        <div class="" style="opacity: 0.5;height: 101vh;width: 101vw;background-image: url(https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&amp;fm=jpg&amp;s=4bf1164d23eea4f04aeefe1732149cf3);background-position: center;margin: 0;background-size: cover;background-repeat: no-repeat;">
+  </style>
+    <!-- Carousel
+    ================================================== -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" style="background: url(https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&fm=jpg&s=4bf1164d23eea4f04aeefe1732149cf3) no-repeat;">
+        <!-- <img class="first-slide" src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&fm=jpg&s=4bf1164d23eea4f04aeefe1732149cf3" alt="First slide"> -->
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Classic Reliance Beurau (<em>{{ appName }}</em>)</h1>
+            <p>Inspections, testing and services. Contact at <code>support@classicreliancebeurau.com</code></p>
+            <p><a class="btn btn-lg btn-primary" href="{{ urlFor('register') }}" role="button">Sign up today</a></p>
+          </div>
         </div>
       </div>
-      <div class="title">
-        <h1>Classic Realiance Beurau</h1>
-        <p class="subline">Inspections, testing and services</p>
-        <p><a href="mailto:karthi@classicreliancebureau.com">karthi@classicreliancebureau.com</a></p>
-      </div>
-    </header>
-    <button class="trigger" data-info="Scroll down"><img src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png" alt="" style="    -webkit-filter:invert(100%);height: 72px;margin-left: -17px;"/></button>
-    <article class="content">
-      <div>
-        <img src="http://classicreliancebureau.com/images/confirm_layout_r1_c1.jpg" alt="" style="transform: translateX(211px); margin-bottom: 65px" />
-        <h3>Vision and Mission Statement</h3>
-        <p>Become a leading total solution provider for Quality, Health, Safety, Security and Environment Management Systems for the global business community.</p>
-
-        <h3>Core Values</h3>
-        <p>Classic Reliance Bureau will uphold a good image and be a responsible entity to the society and business community by observing its core values which are <strong>Ethics and Integrity</strong>, <strong>Partnership</strong>, <strong>Factual Approach to decision making</strong>, <strong>Social and Environmental Responsibility</strong> and <strong>Safety</strong></p>
-        <p>
-          <div class="img-grid" style="position: relative;max-width: 569px;margin: 0 auto;">
-            <img src="http://www.classicreliancebureau.com/images/leftbanner/1.jpg" alt="" class="img-1" style="height: 400px;"/>
-            <img src="http://www.classicreliancebureau.com/images/leftbanner/2.jpg" alt="" class="img-2" style="position: absolute;right: 0;"/>
-            <img src="http://www.classicreliancebureau.com/images/leftbanner/4.jpg" alt="" class="img-3" style="    position: absolute;right: 0;bottom: 0;"/>
+      <div class="item">
+        <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
           </div>
-        </p>
-
-        <h3>Business Values</h3>
-        <p>Classic Reliance Bureau will endeavour to excel on its business values to better serve its customers and partners.</p>
-        <p>Our business values are: <strong>Customer Focus</strong>, <strong>Partnership</strong>, <strong>Mutual beneficial partner relationship</strong>, <strong>Quantity</strong>, <strong>Teamwork</strong> and <strong>Continual Improvement</strong></p>
-
-        <p>
-          Have a look at the <strong><a href="{{ urlFor('company.services') }}">services</a></strong> we offer
-        </p>
+        </div>
       </div>
-    </article>
-  </div><!-- /container -->
-  <script src="http://tympanus.net/Development/ArticleIntroEffects/js/classie.js"></script>
-  <script>
-    (function() {
-
-      // detect if IE : from http://stackoverflow.com/a/16657946
-      var ie = (function(){
-        var undef,rv = -1; // Return value assumes failure.
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf('MSIE ');
-        var trident = ua.indexOf('Trident/');
-
-        if (msie > 0) {
-          // IE 10 or older => return version number
-          rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-        } else if (trident > 0) {
-          // IE 11 (or newer) => return version number
-          var rvNum = ua.indexOf('rv:');
-          rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
-        }
-
-        return ((rv > -1) ? rv : undef);
-      }());
+      <div class="item">
+        <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- /.carousel -->
 
 
-      // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179
-      // left: 37, up: 38, right: 39, down: 40,
-      // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-      var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      function preventDefault(e) {
-        e = e || window.event;
-        if (e.preventDefault)
-        e.preventDefault();
-        e.returnValue = false;
-      }
+  <div class="container marketing" id="#market">
 
-      function keydown(e) {
-        for (var i = keys.length; i--;) {
-          if (e.keyCode === keys[i]) {
-            preventDefault(e);
-            return;
-          }
-        }
-      }
+    <h1 style="text-align:center;">Client testimonials</h1>
+    <hr>
 
-      function touchmove(e) {
-        preventDefault(e);
-      }
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <h2>Shell</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <h2>Heading</h2>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
 
-      function wheel(e) {
-        // for IE
-        //if( ie ) {
-          //preventDefault(e);
-        //}
-      }
 
-      function disable_scroll() {
-        window.onmousewheel = document.onmousewheel = wheel;
-        document.onkeydown = keydown;
-        document.body.ontouchmove = touchmove;
-      }
+    <!-- START THE FEATURETTES -->
 
-      function enable_scroll() {
-        window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
-      }
+    <hr class="featurette-divider">
 
-      var docElem = window.document.documentElement,
-        scrollVal,
-        isRevealed,
-        noscroll,
-        isAnimating,
-        container = document.getElementById( 'container' ),
-        trigger = container.querySelector( 'button.trigger' );
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Seamless certification. <span class="text-muted">It'll blow your mind.</span></h2>
+        <p class="lead">Gone are the days where you would have to physically wait in line for certification. Our client management system here at {{ appName }} enables you to get certified online. Does that interest you? <a href="{{ urlFor('register') }}">Register now</a></p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      </div>
+    </div>
 
-      function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-      }
+    <hr class="featurette-divider">
 
-      function scrollPage() {
-        scrollVal = scrollY();
+    <div class="row featurette">
+      <div class="col-md-7 col-md-push-5">
+        <h2 class="featurette-heading">#1 Security. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Never again do you have to lock your certificates up in a safe. By registering with us, you allow us to strip away all the cons of certification. Basically, we got your <s>back</s> certificates!</p>
+      </div>
+      <div class="col-md-5 col-md-pull-7">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      </div>
+    </div>
 
-        if( noscroll && !ie ) {
-          if( scrollVal < 0 ) return false;
-          // keep it that way
-          window.scrollTo( 0, 0 );
-        }
+    <hr class="featurette-divider">
 
-        if( classie.has( container, 'notrans' ) ) {
-          classie.remove( container, 'notrans' );
-          return false;
-        }
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, the guidelines. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">When you register with us, you will be granted access to viewing the rules and guidelines of certification for your respective country. This is the deal maker for most of our clients. Still not convinced?  Have a look at our <a href="#market">client's testimonials.</a></p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      </div>
+    </div>
 
-        if( isAnimating ) {
-          return false;
-        }
+    <hr class="featurette-divider">
 
-        if( scrollVal <= 0 && isRevealed ) {
-          toggle(0);
-        }
-        else if( scrollVal > 0 && !isRevealed ){
-          toggle(1);
-        }
-      }
+    <!-- /END THE FEATURETTES -->
 
-      function toggle( reveal ) {
-        isAnimating = true;
 
-        if( reveal ) {
-          classie.add( container, 'modify' );
-        }
-        else {
-          noscroll = true;
-          disable_scroll();
-          classie.remove( container, 'modify' );
-        }
+    <!-- FOOTER -->
+    <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
 
-        // simulating the end of the transition:
-        setTimeout( function() {
-          isRevealed = !isRevealed;
-          isAnimating = false;
-          if( reveal ) {
-            noscroll = false;
-            enable_scroll();
-          }
-        }, 600 );
-      }
-
-      // refreshing the page...
-      var pageScroll = scrollY();
-      noscroll = pageScroll === 0;
-
-      disable_scroll();
-
-      if( pageScroll ) {
-        isRevealed = true;
-        classie.add( container, 'notrans' );
-        classie.add( container, 'modify' );
-      }
-
-      window.addEventListener( 'scroll', scrollPage );
-      trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
-    })();
-  </script>
 {% endblock %}

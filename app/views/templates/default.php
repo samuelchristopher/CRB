@@ -15,9 +15,9 @@
   <body>
     {% include 'templates/partials/messages.php' %}
     {% include 'templates/partials/navigation.php' %}
-    <div class="container">
+    <!-- <div class="container"> -->
       {% block content %}{% endblock %}
-    </div>
+    <!-- </div> -->
     {% if auth.isAdmin %}
       {% include 'templates/partials/counter.php' %}
     {% endif %}
