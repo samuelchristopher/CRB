@@ -140,7 +140,7 @@
     <!-- FOOTER -->
     <footer>
       <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2015 <a href="https://github.com/samuelchristopher"><code>samuelchristopher</code></a>. &middot; <a href="{{ urlFor('company.privacy') }}">Privacy</a> &middot; <a href="{{ urlFor('company.terms') }}">Terms</a></p>
+      <p>&copy; 2015 <a href="https://github.com/samuelchristopher"><code>samuelchristopher</code></a>. <a href="{{ urlFor('company.privacy') }}">Privacy</a> &middot; <a href="{{ urlFor('company.terms') }}">Terms</a></p>
     </footer>
 
 {% endblock %}

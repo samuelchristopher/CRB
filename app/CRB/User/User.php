@@ -9,6 +9,7 @@ class User extends Eloquent
   protected $table = 'users';
 
   protected $fillable = [
+      'comment_at',
       'comment',
       'email',
       'first_name',

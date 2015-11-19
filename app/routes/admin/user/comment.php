@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 $app->get('/admin/user/comment/:username', $admin(), function($username) use ($app) {
   $user = $app->user->where('username', $username)->first();
 
@@ -14,6 +16,7 @@ $app->post('/admin/user/comment/:username', $admin(), function($username) use ($
   $request = $app->request;
 
   $comment = $request->post('comment');
+  $commentAt = Carbon::now()->timestamp;
 
   $v = $app->validation;
 
@@ -23,7 +26,8 @@ $app->post('/admin/user/comment/:username', $admin(), function($username) use ($
 
   if($v->passes()) {
     $user->update([
-        'comment' => $comment
+        'comment' => $comment,
+        'comment_at' => $commentAt
     ]);
     $app->mail->send('email/auth/commented.php', [  'user' => $user ], function($message) use ($user) {
       $message->to($user->email);

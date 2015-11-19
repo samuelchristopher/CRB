@@ -74,6 +74,7 @@
           <div class="panel-heading">Comment</div>
             <div class="panel-body">
               {{ user.comment }}
+              <br><small class="text-muted">{{ commentedAt }}</small>
             </div>
         </div>
       {% endif %}
@@ -84,6 +85,7 @@
             <div class="panel-heading">Comment</div>
               <div class="panel-body">
                 {{ auth.comment }}
+                <br><small class="text-muted">{{ commentedAt }}</small>
               </div>
           </div>
         {% endif %}

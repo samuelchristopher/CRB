@@ -3,15 +3,8 @@
 use Carbon\Carbon;
 
 $app->get('/u/:username', function($username) use ($app) {
-
   $user = $app->user->where('username', $username)->first();
-
   $now = Carbon::now()->timestamp;
-
-  // $certificates = $app->cert->where('user_id', $user->id)->get();
-
-  // var_dump($app->user->c);
-
   if(!$user) {
     $app->notFound();
   }
@@ -20,15 +13,18 @@ $app->get('/u/:username', function($username) use ($app) {
     $cs = [];
   } elseif ($app->auth->isAdmin()) {
     $cs = $user->certs()->get();
-  }else {
+    $commentedAt = Carbon::create($user->commented_at)->toFormattedDateString();
+  } else {
     $cs = $app->auth->certs()->get();
+    $commentedAt = Carbon::create($app->auth->commented_at)->toFormattedDateString();
   }
+
 
 
   $app->render('user/profile.php', [
     'user' => $user,
     'cs' => $cs,
-    'now' => $now
-    // 'certificates' => $certificates
+    'now' => $now,
+    'commentedAt' => $commentedAt,
   ]);
 })->name('user.profile');

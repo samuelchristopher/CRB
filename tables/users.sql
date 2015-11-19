@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2015 at 10:29 AM
+-- Generation Time: Nov 19, 2015 at 10:29 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -43,9 +43,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   `company_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `company_address` varchar(3000) COLLATE utf8_unicode_ci NOT NULL,
   `telephone_number` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `cert` varchar(400) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `comment` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `comment` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `comment_at` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Indexes for dumped tables
@@ -65,7 +65,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
