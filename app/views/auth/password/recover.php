@@ -10,8 +10,8 @@
       margin-bottom: 0;
     }
   </style>
-  <h3 for="email">Enter your email address to start your password recovery</h3>
   <div class="container">
+    <h3 for="email">Enter your email address to start your password recovery</h3>
     <form class="form-horizontal" action="{{ urlFor('password.recover.post') }}"  method="post">
       <div class="form-group">
         <input class="form-control" id="email" type="text" name="email" {% if request.post('email') %} value="{{ request.post('email') }}" {% endif %}>

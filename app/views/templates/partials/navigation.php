@@ -12,7 +12,7 @@
 
     <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{ urlFor('home') }}">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="{{ urlFor('company.services') }}">Services</a></li>
         {% if auth %}
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profile<span class="caret"></span></a>
