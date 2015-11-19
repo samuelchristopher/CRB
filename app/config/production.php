@@ -2,7 +2,7 @@
 
 return [
   'app' => [
-      'name' => 'CRB',
+      'name' => 'CRBS',
       'url' => ':)',
       'hash' => [
         'algo' => PASSWORD_BCRYPT,

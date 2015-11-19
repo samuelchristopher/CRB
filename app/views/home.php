@@ -68,7 +68,7 @@
 
   <div class="container marketing" id="#market">
 
-    <h1 style="text-align:center;">Client testimonials</h1>
+    <h1 style="text-align:center;">Previous clients</h1>
     <hr>
 
     <!-- Three columns of text below the carousel -->
@@ -77,19 +77,19 @@
         <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
         <h2>Shell</h2>
         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ urlFor('company.clients') }}" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
         <h2>Heading</h2>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ urlFor('company.clients') }}" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
         <h2>Heading</h2>
         <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ urlFor('company.clients') }}" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
@@ -125,7 +125,7 @@
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">And lastly, the guidelines. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">When you register with us, you will be granted access to viewing the rules and guidelines of certification for your respective country. This is the deal maker for most of our clients. Still not convinced?  Have a look at our <a href="#market">client's testimonials.</a></p>
+        <p class="lead">When you register with us, you will be granted access to viewing the rules and guidelines of certification for your respective country. This is the deal maker for most of our clients. Still not convinced?  Have a look at our <a href="{{ urlFor('company.clients') }}">previous clients.</a></p>
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
