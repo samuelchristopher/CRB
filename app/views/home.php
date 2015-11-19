@@ -24,8 +24,8 @@
         <!-- <img class="first-slide" src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&fm=jpg&s=4bf1164d23eea4f04aeefe1732149cf3" alt="First slide"> -->
         <div class="container">
           <div class="carousel-caption">
-            <h1>Classic Reliance Beurau (<em>{{ appName }}</em>)</h1>
-            <p>Inspections, testing and services. Contact at <code>support@classicreliancebeurau.com</code></p>
+            <h1>Classic Reliance Bureau (<em>{{ appName }}</em>)</h1>
+            <p>Inspections, testing and services. Contact at <code>{{ emailAddress }}</code></p>
             <p><a class="btn btn-lg btn-primary" href="{{ urlFor('register') }}" role="button">Sign up today</a></p>
           </div>
         </div>
@@ -140,7 +140,7 @@
     <!-- FOOTER -->
     <footer>
       <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <p>&copy; 2015 <a href="https://github.com/samuelchristopher"><code>samuelchristopher</code></a>. &middot; <a href="{{ urlFor('company.privacy') }}">Privacy</a> &middot; <a href="{{ urlFor('company.terms') }}">Terms</a></p>
     </footer>
 
 {% endblock %}
