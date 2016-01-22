@@ -42,9 +42,9 @@
         <!-- <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"> -->
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            <h1>Consultancy and Audit Services</h1>
+            <p>Classic Reliance Bureau ({{ appName }}) Services provides consultancy and audit services to support our clients attain compliance with Quality (ISO 9001), Health and Safety (OSHAS 18001) and Environmental (ISO 14001) Management Systems, lifting regulations, International Safety Management Code (ISM), International Ship and Port Security Code (ISPS).</p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
           </div>
         </div>
       </div>
@@ -52,9 +52,9 @@
         <!-- <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide"> -->
         <div class="container">
           <div class="carousel-caption">
-            <h1>One more for good measure.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            <h1>Lifting Equipment Inspection Services</h1>
+            <p>Classic Reliance Bureau ({{ appName }}) Services provides the following services to meet Safety Regulations of JKR Brunei, Oil and Gas companies and to comply with Insurance requirements of all industries.</p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
           </div>
         </div>
       </div>
