@@ -3,7 +3,7 @@
 return [
   'app' => [
       'name' => 'CRBS',
-      'url' => ':)',
+      'url' => 'http://crbsweb.com',
       'hash' => [
         'algo' => PASSWORD_BCRYPT,
         'cost' => 10
@@ -11,10 +11,10 @@ return [
     ],
       'db' => [
         'driver' => 'mysql',
-        'host' => '127.0.0.1',
+        'host' => '188.166.223.85',
         'name' => 'site',
         'username' => 'root',
-        'password' => '',
+        'password' => 'e2Rpbhl4hC',
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix' => ''
