@@ -11,7 +11,7 @@ return [
     ],
       'db' => [
         'driver' => 'mysql',
-        'host' => '188.166.223.85',
+        'host' => '127.0.0.1',
         'name' => 'site',
         'username' => 'root',
         'password' => 'e2Rpbhl4hC',
