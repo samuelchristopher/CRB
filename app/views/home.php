@@ -111,7 +111,7 @@
         <p class="lead">Our client management system here at {{ appName }} enables you to get certified online. Contact us or existing cutomer? <a href="{{ urlFor('register') }}">Register now</a></p>
       </div>
       <div class="col-md-5">
-        <img class="featurette-image img-responsive center-block" src="app/assets/four.jpg" alt="Generic placeholder image">
+        <img class="featurette-image img-responsive center-block" src="app/assets/cert.png" alt="Generic placeholder image">
       </div>
     </div>
 
@@ -123,7 +123,7 @@
         <p class="lead">Your certificates are safe with us! By registering with us, you allow us to strip away all the cons of certification. Basically, we got your certificates!</p>
       </div>
       <div class="col-md-5 col-md-pull-7">
-        <img class="featurette-image img-responsive center-block" src="app/assets/five.jpg" alt="Generic placeholder image">
+        <img class="featurette-image img-responsive center-block" src="app/assets/security.png" alt="Generic placeholder image">
       </div>
     </div>
 
@@ -135,7 +135,7 @@
         <p class="lead">When you register with us, you will be granted access to viewing the rules and guidelines of certification for your respective country. This is the deal maker for most of our clients.</a></p>
       </div>
       <div class="col-md-5">
-        <img class="featurette-image img-responsive center-block" src="app/assets/six.png" alt="Generic placeholder image">
+        <img class="featurette-image img-responsive center-block" src="app/assets/simple.png" alt="Generic placeholder image">
       </div>
     </div>
 
