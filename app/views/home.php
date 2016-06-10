@@ -107,8 +107,8 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Seamless certification. <span class="text-muted">It'll blow your mind.</span></h2>
-        <p class="lead">Gone are the days where you would have to physically wait in line for certification. Our client management system here at {{ appName }} enables you to get certified online. Does that interest you? <a href="{{ urlFor('register') }}">Register now</a></p>
+        <h2 class="featurette-heading">Seamless certification.</h2>
+        <p class="lead">Our client management system here at {{ appName }} enables you to get certified online. Contact us or existing cutomer? <a href="{{ urlFor('register') }}">Register now</a></p>
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-responsive center-block" src="app/assets/four.jpg" alt="Generic placeholder image">
@@ -120,7 +120,7 @@
     <div class="row featurette">
       <div class="col-md-7 col-md-push-5">
         <h2 class="featurette-heading">#1 Security. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Never again do you have to lock your certificates up in a safe. By registering with us, you allow us to strip away all the cons of certification. Basically, we got your <s>back</s> certificates!</p>
+        <p class="lead">Your certificates are safe with us! By registering with us, you allow us to strip away all the cons of certification. Basically, we got your certificates!</p>
       </div>
       <div class="col-md-5 col-md-pull-7">
         <img class="featurette-image img-responsive center-block" src="app/assets/five.jpg" alt="Generic placeholder image">
@@ -131,8 +131,8 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, the guidelines. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">When you register with us, you will be granted access to viewing the rules and guidelines of certification for your respective country. This is the deal maker for most of our clients. Still not convinced?  Have a look at our <a href="{{ urlFor('company.clients') }}">previous clients.</a></p>
+        <h2 class="featurette-heading">Simplicity</h2>
+        <p class="lead">When you register with us, you will be granted access to viewing the rules and guidelines of certification for your respective country. This is the deal maker for most of our clients.</a></p>
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-responsive center-block" src="app/assets/six.png" alt="Generic placeholder image">
@@ -147,7 +147,7 @@
     <!-- FOOTER -->
     <footer>
       <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2015 <a href="https://github.com/samuelchristopher"><code>samuelchristopher</code></a>. <a href="{{ urlFor('company.privacy') }}">Privacy</a> &middot; <a href="{{ urlFor('company.terms') }}">Terms</a></p>
+      <p>&copy; 2016 <code>samuelchristopher</code>. <a href="{{ urlFor('company.privacy') }}">Privacy</a> &middot; <a href="{{ urlFor('company.terms') }}">Terms</a></p>
     </footer>
 
 {% endblock %}
