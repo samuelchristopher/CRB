@@ -28,7 +28,7 @@
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
-      <div class="item active" style="background: url(app/assets/one.jpg) no-repeat;background-size: cover;background-position: center center;">
+      <div class="item active" style="background: url(app/assets/Crbs-Pic2.jpg) no-repeat;background-size: cover;background-position: center center;">
         <!-- <img class="first-slide" src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&fm=jpg&s=4bf1164d23eea4f04aeefe1732149cf3" alt="First slide"> -->
         <div class="container">
           <div class="carousel-caption">
@@ -38,17 +38,17 @@
           </div>
         </div>
       </div>
-      <div class="item" style="background: url(app/assets/two.jpg) no-repeat;background-size: cover;background-position: center center;">
+      <div class="item" style="background: url(app/assets/Auditing_pic3.jpg) no-repeat;background-size: cover;background-position: center center;">
         <!-- <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"> -->
         <div class="container">
           <div class="carousel-caption">
-            <h1>Consultancy and Audit Services</h1>
-            <p>Classic Reliance Bureau ({{ appName }}) Services provides consultancy and audit services to support our clients attain compliance with Quality (ISO 9001), Health and Safety (OSHAS 18001) and Environmental (ISO 14001) Management Systems, lifting regulations, International Safety Management Code (ISM), International Ship and Port Security Code (ISPS).</p>
+            <h1 style="color: black">Consultancy and Audit Services</h1>
+            <p style="color: black">Classic Reliance Bureau ({{ appName }}) Services provides consultancy and audit services to support our clients attain compliance with Quality (ISO 9001), Health and Safety (OSHAS 18001) and Environmental (ISO 14001) Management Systems, lifting regulations, International Safety Management Code (ISM), International Ship and Port Security Code (ISPS).</p>
             <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
           </div>
         </div>
       </div>
-      <div class="item" style="background: url(app/assets/three.jpg) no-repeat;background-size: cover;background-position: center center;">
+      <div class="item" style="background: url(app/assets/ISO-certification.jpeg) no-repeat;background-size: cover;background-position: center center;">
         <!-- <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide"> -->
         <div class="container">
           <div class="carousel-caption">
@@ -75,7 +75,7 @@
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing" id="#market">
-
+    <h1 style="text-align:center;"> <img style="width: 300px;margin-bottom: -62px;" src="app/assets/crbslogo.png"/></h1>
     <!-- <h1 style="text-align:center;">Previous clients</h1>
     <hr>
 
@@ -111,7 +111,7 @@
         <p class="lead">Our client management system here at {{ appName }} enables you to get certified online. Contact us or existing cutomer? <a href="{{ urlFor('register') }}">Register now</a></p>
       </div>
       <div class="col-md-5">
-        <img class="featurette-image img-responsive center-block" src="app/assets/cert.png" alt="Generic placeholder image">
+        <img class="featurette-image img-responsive center-block" style="height: 300px" src="app/assets/cert.png" alt="Generic placeholder image">
       </div>
     </div>
 
@@ -123,7 +123,7 @@
         <p class="lead">Your certificates are safe with us! By registering with us, you allow us to strip away all the cons of certification. Basically, we got your certificates!</p>
       </div>
       <div class="col-md-5 col-md-pull-7">
-        <img class="featurette-image img-responsive center-block" src="app/assets/security.png" alt="Generic placeholder image">
+        <img class="featurette-image img-responsive center-block" style="height: 300px" src="app/assets/security.png" alt="Generic placeholder image">
       </div>
     </div>
 
@@ -135,7 +135,7 @@
         <p class="lead">When you register with us, you will be granted access to viewing the rules and guidelines of certification for your respective country. This is the deal maker for most of our clients.</a></p>
       </div>
       <div class="col-md-5">
-        <img class="featurette-image img-responsive center-block" src="app/assets/simple.png" alt="Generic placeholder image">
+        <img class="featurette-image img-responsive center-block" style="height: 300px" src="app/assets/simple.png" alt="Generic placeholder image">
       </div>
     </div>
 
